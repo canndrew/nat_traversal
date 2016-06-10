@@ -292,6 +292,7 @@ impl MappedTcpSocket {
                             addr: SocketAddr(net::SocketAddr::V4(local_iface_addr)),
                             nat_restricted: false,
                         });
+                        /*
                         if let Some(gateway) = iface_v4.gateway {
                             match gateway.get_any_address(igd::PortMappingProtocol::TCP,
                                                           local_iface_addr, 0,
@@ -311,6 +312,7 @@ impl MappedTcpSocket {
                                 }
                             }
                         };
+                        */
                     };
                 }
                 else {
@@ -347,6 +349,7 @@ impl MappedTcpSocket {
                         }
                     };
                     // If we have a gateway, ask it for an external address.
+                    /*
                     if let Some(gateway) = gateway_opt {
                         match gateway.get_any_address(igd::PortMappingProtocol::TCP,
                                                       local_addr_v4, 0,
@@ -366,6 +369,7 @@ impl MappedTcpSocket {
                             }
                         }
                     };
+                    */
                 };
             },
             IpAddr::V6(ipv6_addr) => {
